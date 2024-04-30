@@ -1,0 +1,38 @@
+.bg {
+    width: 100%;
+    background-image: url('../../assets/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+body {
+  background-color: var(--bg);
+}
+
+
+
+
+  .sonImage {
+    max-width: 600px;
+    border-radius: 25px;
+  }
+
+  
+  @media screen and (max-width: 700px) {
+    h1.styled {
+        font-size: 3rem;
+    }
+
+    nav {
+      background-color: black;
+      max-width:100%;
+      overflow:hidden;
+    }
+
+    .sonImage {
+      max-width: 350px;
+    }
+  }

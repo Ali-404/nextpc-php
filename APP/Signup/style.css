@@ -1,0 +1,80 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(28, 3, 40);
+  padding: 3rem 0;
+ 
+}
+
+.divCenter{
+  /* min-width: 800px; */
+  /* min-height: 480px; */
+  background-color: rgb(67, 7, 97);
+  overflow: hidden;
+  
+  background-image: url("../../assets/pattern.png");
+  background-size: 25%;
+}
+
+
+
+.picture{
+  background-image: url('../../assets/pc1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  min-height: 690px;
+}
+
+.login {
+  padding: 25px;
+}
+
+.btnLogin{
+  background-color: blueviolet;
+  border: none;
+  width: 120px;
+  height: 40px;
+}
+
+.links{
+  color: rgb(251, 0, 163);
+  margin: 0 5px;
+  font-style: italic;
+}
+
+.inputsIcon{
+  height: 50px;
+  background-color: white;
+  
+}
+
+.inpOfInfo{
+  border: none;
+  outline: none;
+}
+
+.gog{
+  color: red;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.fb{
+  color: blue;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  font-size: 2rem;
+  border: none;
+}
+
+.insta{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  border-radius: 50%;
+  font-size: 2rem;
+}
