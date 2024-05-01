@@ -35,7 +35,7 @@
           </div>
 
           <div class="input-group mb-3">
-              <span class="input-group-text bs bi bi-envelope" id="basic-addon1"></span>
+              <span class="input-group-text bs bi bi-telephone" id="basic-addon1"></span>
               <input type="tel" class="form-control" placeholder="+212" aria-label="Phone" aria-describedby="basic-addon1">
           </div>
   
@@ -51,16 +51,19 @@
 
         </div>
 
-        <div class="d-flex align-items-center justify-content-center gap-3">
-          <div class="gog">
-            <span class="bi bi-google"></span>
-          </div>
-          <div class="fb">
+        <div class="wrapper d-flex align-items-center justify-content-center gap-3">
+          <li class="icon facebook">
+            <span class="tooltip">Facebook</span>
             <span class="bi bi-facebook"></span>
-          </div>
-          <div class="insta">
-            <span class="bi bi-instagram"></span>
-          </div>
+          </li>
+          <li class="icon google">
+            <span class="tooltip">Google</span>
+            <span class="bi bi-google"></span>
+          </li>
+          <li class="icon github">
+            <span class="tooltip">github</span>    
+            <span class="bi bi-github"></span>
+          </li>
         </div>
         
         <div>

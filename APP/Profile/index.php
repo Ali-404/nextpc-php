@@ -1,7 +1,7 @@
 
 <html data-bs-theme="dark">
   <head>
-    <title> NAME OF PAGE </title>
+    <title> Profile </title>
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -13,9 +13,47 @@
   </head>
   <body>
 
+    <section>
+      <div class="profilePic">
+
+      </div>
+
+      <div>
+        <h1>Username</h1>
+        <p>jamalalfa123@gmail.com</p>
+        <p>uniq number(icon of copy)</p>
+      </div>
+
+      <div>
+        <h3>1045</h3><p>Followers</p>
+        <h3>106</h3><p>Following</p>
+      </div>
+
+      <div>
+        <button>Edit Profile</button>
+      </div>
+
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates saepe accusantium id a architecto deserunt. Cumque repellendus fuga earum!</p>
+      </div>
+
+      <div>
+        <div>Twitter</div>
+        <div>Instagram</div>
+        <div>Facebook</div>
+        <div>Discord</div>
+      </div>
+
+      <div>
+        <p>Joined May,2024</p>
+      </div>
+
+
+
+
+    </section>
 
     
-  
 
   </body>
 

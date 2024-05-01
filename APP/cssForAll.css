@@ -309,3 +309,173 @@ a:hover {
     border-radius: 50px;
     border: 5px solid #ffffff;
   }
+
+
+  .wrapper {
+    list-style: none;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #2d1429;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .google:hover,
+  .wrapper .google:hover .tooltip,
+  .wrapper .google:hover .tooltip::before {
+    background: #f21d59;
+    color: #fff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #26016c;
+    color: #fff;
+  }
+  
+
+
+  /* like btn */
+  .heart-container {
+    --heart-color: rgb(255, 91, 244);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+  }
+  
+  .heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .heart-container .svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart-container .svg-outline,
+          .heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+  }
+  
+  .heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+  }
+  
+  .heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+  }
+  
+  @keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+  }
+  
+  @keyframes keyframes-svg-celebrate {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+      display: none;
+    }
+  }
