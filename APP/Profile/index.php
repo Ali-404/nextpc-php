@@ -1,4 +1,3 @@
-
 <html data-bs-theme="dark">
   <head>
     <title> Profile </title>
@@ -13,43 +12,52 @@
   </head>
   <body>
 
-    <section>
+    <section class="min-vh-100 d-flex align-items-center justify-content-center flex-column pt-5">
       <div class="profilePic">
 
       </div>
 
-      <div>
-        <h1>Username</h1>
-        <p>jamalalfa123@gmail.com</p>
-        <p>uniq number(icon of copy)</p>
+      <div class="d-flex flex-row align-items-center justify-content-center flex-column gap-2">
+        <h1 style="font-size: 3rem;">Username</h1>
+        <p class="d-flex flex-row align-items-center justify-content-center">jamalalfa123@gmail.com</p>
+        <p class="d-flex flex-row align-items-center justify-content-center gap-1">543643<span class="bi bi-copy d-block"></span></p>
+      </div>
+
+      <div class="d-flex align-items-center p-4 ">
+        <div>
+          <h3>1045</h3><p>Followers</p>
+        </div>
+        <div>
+          <h3>106</h3><p>Following</p>
+        </div>
       </div>
 
       <div>
-        <h3>1045</h3><p>Followers</p>
-        <h3>106</h3><p>Following</p>
+        <button class="btn">Edit Profile</button>
       </div>
 
-      <div>
-        <button>Edit Profile</button>
+      <div style="padding:6rem 4rem;">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis saepe alias officia illum, tempore enim animi voluptate nesciunt quam non aliquam, corporis itaque voluptas cumque illo esse quia molestiae eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates saepe accusantium id a architecto deserunt. Cumque repellendus fuga earum!</p>
       </div>
 
-      <div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates saepe accusantium id a architecto deserunt. Cumque repellendus fuga earum!</p>
-      </div>
-
-      <div>
-        <div>Twitter</div>
-        <div>Instagram</div>
-        <div>Facebook</div>
-        <div>Discord</div>
+      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+        <div>
+          <span class="bi bi-twitter"></span>
+        </div>
+        <div>
+          <span class="bi bi-instagram"></span>
+        </div>
+        <div>
+          <span class="bi bi-facebook"></span>
+        </div>
+        <div>
+          <span class="bi bi-discord"></span>
+        </div>
       </div>
 
       <div>
         <p>Joined May,2024</p>
       </div>
-
-
-
 
     </section>
 

@@ -6,14 +6,15 @@
 * Landing Page -> Ali
 * Home Page -> Ali
 * product Page -> Ali
+* checkout page -> Ali
 
 
 
 * Profile -> Soukaina
 * busket page -> Soukaina
-* checkout page -> Ali
 * Done Page -> Soukaina
 * contact page -> Ali
+
 
 
 
@@ -28,6 +29,7 @@
 * Home
 * Signup
 * Product Page
+* Checkout Page
 
 
 
