@@ -124,7 +124,7 @@
       </div>
       
     </section>
-    <button class="btn1 position">Load More ..</button>
+    <button class="btn1 w-100 my-3">Load More ..</button>
     </div>
     <footer class="py-3 ">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">

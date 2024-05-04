@@ -14,9 +14,9 @@ body {
 .divCenter{
   /* min-width: 800px; */
   /* min-height: 480px; */
+  min-height: 100vh;
   background-color: rgb(7, 74, 97);
-  overflow: hidden;
-  
+  /* overflow: hidden; */
   background-image: url("../../assets/pattern.png");
   background-size: 25%;
 }
@@ -78,3 +78,4 @@ body {
   border-radius: 50%;
   font-size: 2rem;
 }
+

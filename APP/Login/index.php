@@ -17,7 +17,7 @@
       <div class="picture d-none d-md-block">
       </div>
 
-      <div class="login d-flex flex-column align-items gap-4">
+      <form class="login d-flex flex-column align-items gap-4">
 
         <div>
           <h1 style="font-size: 3rem;" class="py-2">welcome back!</h1>
@@ -48,17 +48,17 @@
         </div>
         
         <div>
-          <a class="btn2 rounded-3">login</a>
+          <button type="submit" class="btn2 rounded-3 w-100">Login</button>
         </div>
 
         <div class="d-flex align-items-center gap-2 py-2">
           <span>Don't have an account?</span>
           <div>
-          <a class="btn1" href="#">Sign Up now</a>
+          <a class="btn1" href="../Signup/index.php">Sign up now</a>
           </div>
         </div>
 
-      </div>
+      </form>
 
     </div>
 
