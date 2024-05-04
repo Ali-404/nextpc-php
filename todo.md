@@ -7,12 +7,12 @@
 * Home Page -> Ali
 * product Page -> Ali
 * checkout page -> Ali
+* Done page -> soukaina
 
 
 
 * Profile -> Soukaina
 * busket page -> Soukaina
-* Done Page -> Soukaina
 * contact page -> Ali
 
 
@@ -30,7 +30,12 @@
 * Signup
 * Product Page
 * Checkout Page
+* Done Page
 
+
+
+## Backend
+* Authentication System
 
 
 ## NOTES
