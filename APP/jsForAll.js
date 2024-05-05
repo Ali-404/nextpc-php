@@ -37,3 +37,28 @@ function showAlert(type, text,timeout = 3000){
 function setLoading(bool = false){
   document.getElementById("bgLoading")?.classList.toggle("hidden",bool)
 }
+
+function UpdateNavBar(is_logged_in, username = false){
+  const btn = document.querySelector("#navAuthButton") 
+  const prof = document.querySelector("#navAuthProfile") 
+
+
+  btn.style.display = is_logged_in  ? "none"  : "block";
+  prof.style.display = is_logged_in  ? "block"  : "none";
+
+  if (username && is_logged_in){
+    btn.innerText = username[0]
+  }
+}
+
+function requestLogout(){
+  $.ajax({
+    url: "../../Backend/Logout.php",
+    data: {
+      request: "logout"
+    },
+    success: function( result ) {
+      window.location.reload()
+    }
+  });
+}

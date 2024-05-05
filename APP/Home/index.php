@@ -1,8 +1,15 @@
+
+
 <html data-bs-theme="dark">
   <head>
     <title> Home </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset=UTF-8">
+
+
+    <!-- jquery -->
+    <script src="../../jquery-3.7.1.min.js" defer></script>
+
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--  icons -->
@@ -10,12 +17,15 @@
     <!-- style -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../cssForAll.css">
+
+  <script src='../jsForAll.js'></script>
+
   </head>
   
   <body>
 
 
-    <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
+      <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
       <div class="container-fluid">
           <a class="navbar-brand btn2" href="#">Logo</a>
           
@@ -33,13 +43,32 @@
               <li class="nav-item">
               <a class="nav-link text-light" href="#">Contact</a>
               </li>
-              <li class="nav-item">
-              <a class="btn1" href="#">Sign In/Up</a>
+              <li class="nav-item" id="navAuthButton">
+              <a class="btn1" href="../Login/index.php">Sign In/Up</a>
               </li>                  
+              <li class="nav-item d-flex gap-3 align-items-center" id="navAuthProfile">
+                <button class="Profile shadow">A</button>
+                <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
+              </li>    
           </div >
           <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
           </div>
     </nav>
+    
+
+    
+  <?php 
+    include "home.php";
+    session_start();
+    if (isset($_SESSION["account"])){
+      $account = json_decode($_SESSION["account"], true);
+      $username = $account['username'];
+      echo "<script>UpdateNavBar(true, '".$username."')</script>";
+    }else {
+      echo "<script>UpdateNavBar(false)</script>";
+    }
+?>  
+
 
     <ul class="list shadow d-flex align-items-center justify-content-md-center gap-5 text-center p-3" >
       <li><a href="" class="bi bi-pc link link-light link-active"> Pc Gamer </a></li>
@@ -136,10 +165,14 @@
         </ul>
         <p class="text-center text-body-white">© 2024 Company, Inc</p>
     </footer>
+
+    
   </body>
 
   <!--  our script-->
   <script src='./script.js'></script>
-  <script src='../jsForAll.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
 </html>
+
+

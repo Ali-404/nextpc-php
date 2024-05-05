@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 include "db.php";
 
 
@@ -43,6 +45,29 @@ function CreateAccount($username, $pwd, $gmail, $phone){
     }
     return false;
 
+}
+
+
+function LogIn($username, $password){
+    // search for account 
+    $account = getAccountByData("username",$username);
+    if (!$account){
+        echo "<script>showAlert('danger', 'Invalid Account With This username!')</script>";
+        return false;
+    }
+    // match password
+    $hashed_password = $account["password"];
+    if (!password_verify($password, $hashed_password)){
+        echo "<script>showAlert('danger', '".$password." ".$hashed_password."  ' )</script>";
+        echo "<script>showAlert('danger', 'Wrong Password !')</script>";
+        return false;
+    }
+
+    // save account to session
+    $_SESSION['account'] = json_encode($account);
+
+    
+    return true;
 }
     
 
