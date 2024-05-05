@@ -1,5 +1,5 @@
 function onSubmit(e){
-
+    setLoading(true)
     var regularExpression = new RegExp("(?=.*\\d)(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\\]{};:<>,.?])");
 
     const password = document.getElementById("password").value 
@@ -22,4 +22,6 @@ function onSubmit(e){
         e.preventDefault();
         showAlert("danger", "Wrong Password confermation !")
     }
+
+    setTimeout( () => setLoading(false),400)
 }

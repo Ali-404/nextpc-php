@@ -20,10 +20,16 @@ body {
     border-radius: 25px;
   }
 
-  
+  h1.title {
+    font-size:10rem;
+  }
   @media screen and (max-width: 700px) {
     h1.styled {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    h1.title {
+      font-size: 5rem;
     }
 
     nav {

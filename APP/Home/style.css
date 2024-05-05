@@ -102,3 +102,13 @@ body::after{
 .link:hover {
   transform: scale(1.1);
 }
+
+
+small {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

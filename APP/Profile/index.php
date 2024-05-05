@@ -14,7 +14,7 @@
   <body>
 
     <section class="p-5">
-      <div class="head d-flex flex- align-items-center">
+      <div class="head d-flex align-items-center flex-lg-column">
         <div class="profilePic"></div>
 
         <div class="info">
@@ -34,7 +34,7 @@
           <it>Favorites</it>
         </div>
       </div>
-      <hr class="container-frui">
+      <hr class="container-fluid">
 
 
 

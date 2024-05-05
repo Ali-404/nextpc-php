@@ -24,7 +24,7 @@
   
   <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
       <div class="container-fluid">
-          <a class="navbar-brand btn2" href="#">Logo</a>
+      <a class="navbar-brand btn2 bi bi-pc-display" href="../Landing/index.php"> Next PC</a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon " style="color:white"></span>
@@ -70,45 +70,17 @@
             <div class="px-5 backBlurlOW d-flex flex-column align-items-center justify-content-center min-vh-100">
            
               <div class="text-white  text-center d-flex flex-column  align-items-center justify-content-center" style="min-height: 100vh;">
-                <h1  class="styled shadow fw-bold">Top-quality Gaming</h1>
+                <h1  class="title styled shadow fw-bold bi bi-pc-display"> Next PC</h1>
                 <h1  class="styled shadow fw-bold">Experience for your children</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium non libero, eum quas temporibus consectetur!</p>
                 <div class="my-4">
-                  <a href="" class="bi bi-basket btn2"> BUY NOW</a>
+                  <a href="../Home/index.php" class="bi bi-basket btn2"> BUY NOW</a>
                 </div>
               
               </div>
 
               
-              <div class="d-flex gap-2 align-items-center justify-content-md-center w-100 p-5 " style="max-width: 100vw;overflow-x: auto;overflow-y: hidden;">
-                 
-              <div class="card ">
-                        <img src="https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1704927373" />
-                        <h1 class="heading">PC BLA BLA BLA</h1>
-                        <div><span class="oldPrice">9999 Dhs</span> <span class="price">7599 Dhs</span></div>
-                        <div class="my-3">
-                          <a class="btn1 text-bg-light bi bi-basket"> Buy Now</a>
-                        </div>
-                  </div>
-                  <div class="card ">
-                        <img src="https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1704927373" />
-                        <h1 class="heading">PC BLA BLA BLA</h1>
-                        <div><span class="oldPrice">9999 Dhs</span> <span class="price">7599 Dhs</span></div>
-                        <div class="my-3">
-                          <a class="btn1 text-bg-light bi bi-basket"> Buy Now</a>
-                        </div>
-                  </div>
-                  <div class="card ">
-                        <img src="https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1704927373" />
-                        <h1 class="heading">PC BLA BLA BLA</h1>
-                        <div><span class="oldPrice">9999 Dhs</span> <span class="price">7599 Dhs</span></div>
-                        <div class="my-3">
-                          <a class="btn1 text-bg-light bi bi-basket"> Buy Now</a>
-                        </div>
-                  </div>
-                
-                
-              </div>
+             
               
 
              </div>
@@ -154,7 +126,7 @@
               <p class="my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ut, beatae labore rem distinctio placeat id minima dolore ipsum earum soluta quas quam necessitatibus at quibusdam sunt suscipit totam inventore.</p>
 
               <div style="margin-top:40px">
-                <a href="" class="btn2">UPGRADE NOW</a>
+                <a href="../../APP/Home/index.php" class="btn2">UPGRADE NOW</a>
               </div>
             </div>          
         </section>
