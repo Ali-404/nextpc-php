@@ -10,11 +10,8 @@
 
 body {
   background-color: var(--bg);
+ 
 }
-
-
-
-
   .sonImage {
     max-width: 600px;
     border-radius: 25px;
@@ -41,4 +38,10 @@ body {
     .sonImage {
       max-width: 350px;
     }
+  }
+
+  .imagePattern {
+    background-image: url('../../assets/pattern.png');
+    background-size: 15%;
+    background-color: rgb(14, 1, 14);
   }

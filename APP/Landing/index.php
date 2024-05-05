@@ -65,7 +65,7 @@
     }
 ?>  
 
-    <div class="gradientBG">
+    <div class=" imagePattern"  >
         <section class="bg">
             <div class="px-5 backBlurlOW d-flex flex-column align-items-center justify-content-center min-vh-100">
            

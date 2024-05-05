@@ -127,18 +127,24 @@ function LoadProductHTML(product){
     const productsContainer = document.getElementById('productsContainer')
     const newElement = document.createElement("div")
     newElement.innerHTML = `
-        <div class="card " data-discription="${product[2]}">
+        <div class="card " onclick="OpenProductPage(${product[0]})" data-discription="${product[2]}">
         <img src="../../UPLOAD/${product[10]}/${product[8]}" />
         <h1 class="heading">${product[1]}</h1>
         <div><span class="oldPrice">${product[4]} Dhs</span><span class="price"> ${product[3]} Dhs</span></div>
         <div class="my-3">
-            <a class="btn1 text-bg-light bi bi-basket"> Buy Now</a>
+            <a class="btn1 text-bg-light bi bi-basket" onclick="OpenProductPage(${product[0]})"> Buy Now</a>
         </div>
         </div>
     `
     productsContainer.appendChild(newElement)
     document.querySelector("small").classList.add("hidden")
 }
+
+
+function OpenProductPage(id){
+    window.location.href = `../Product/index.php?product=${id}`
+}
+
 
 // Load Categories on start
 LoadCategories();

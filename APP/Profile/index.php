@@ -2,7 +2,7 @@
   <head>
     <title> Profile </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset=UTF-8">
+    <meta charset="UTF-8">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--  icons -->
@@ -14,33 +14,43 @@
   <body>
 
     <section class="p-5">
-      <div class="head d-flex align-items-center flex-lg-column">
-        <div class="profilePic"></div>
+      <div class="head d-flex align-items-center">
+        <div class="profilePic">A</div>
 
         <div class="info">
           <h1>Username</h1>
-          <p>username12@gmail.com</p>
+          <p class="text-secondary-emphasis">0612345678</p>
+          <p class="text-secondary-emphasis">username12@gmail.com</p>
           <button class="editBtn">Edit</button>
         </div>
       </div>
 
-      <div>
-        <div>
-          <span></span>
-          <p>Orders</p>
+      <div class="d-flex align-items-center">
+
+        <div id="orders" class="ordFav">
+          <span class="text-secondary bi bi-bag-fill"></span>
+          <span class="text-secondary">Orders</span>
         </div>
-        <div>
-          <span></span>
-          <it>Favorites</it>
+
+        <div id="fav" class="ordFav">
+          <span class="text-secondary bi bi-heart-fill"></span>
+          <span class="text-secondary">Favorites</span>
         </div>
+
       </div>
-      <hr class="container-fluid">
 
+      <div class="border border-bottom-0 min-vh-100">
 
+        <h>
+          <span class="bi bi-border-width"></span>
+          <h3>Send </h3>
+        </h>
+
+      </div>
 
     </section>
 
-    
+    <p class="joined text-secondary">Joined May,2023</p>
 
   </body>
 

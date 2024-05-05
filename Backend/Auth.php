@@ -43,8 +43,8 @@ function CreateAccount($username, $pwd, $gmail, $phone){
     global $conn;
     $password = password_hash($pwd, PASSWORD_DEFAULT);
     
-    $sql = "INSERT INTO accounts (username, email, phone,password,likes)
-    VALUES ('".$username."', '".$gmail."', '".$phone."','".$password."','".json_encode(array())."')";
+    $sql = "INSERT INTO accounts (username, email, phone,password)
+    VALUES ('".$username."', '".$gmail."', '".$phone."','".$password."')";
 
     if ($conn->query($sql) === TRUE) {
         $conn->commit();

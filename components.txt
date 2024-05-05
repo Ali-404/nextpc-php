@@ -12,9 +12,9 @@
 </div>
 
 [Nav bar]
- <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
+   <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
       <div class="container-fluid">
-          <a class="navbar-brand btn2" href="#">Logo</a>
+          <a class="navbar-brand btn2 bi bi-pc-display" href="../Landing/index.php"> Next PC</a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon " style="color:white"></span>
@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Pc Gamer</a>
+              <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
               </li>
               <li class="nav-item">
               <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
@@ -30,13 +30,30 @@
               <li class="nav-item">
               <a class="nav-link text-light" href="#">Contact</a>
               </li>
-              <li class="nav-item">
-              <a class="btn1" href="#">Sign In/Up</a>
+              <li class="nav-item" id="navAuthButton">
+              <a class="btn1" href="../Login/index.php">Sign In/Up</a>
               </li>                  
+              <li class="nav-item d-flex gap-3 align-items-center" id="navAuthProfile">
+                <button class="Profile shadow">A</button>
+                <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
+              </li>    
           </div >
           <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
           </div>
     </nav>
+    
+
+    
+  <?php 
+    session_start();
+    if (isset($_SESSION["account"])){
+      $account = json_decode($_SESSION["account"], true);
+      $username = $account['username'];
+      echo "<script>UpdateNavBar(true, '".$username."')</script>";
+    }else {
+      echo "<script>UpdateNavBar(false)</script>";
+    }
+?>  
 
 
 [footer]

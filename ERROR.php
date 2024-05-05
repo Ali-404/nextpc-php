@@ -36,7 +36,17 @@
 </style>
 <body >
     <h1>Error</h1>
-    <p>Unable to connect to our Database !</p>
+    <p style="text-align: center;">We have a probleme !</p>
     <a href="./index.php" class="btn2">Back to landing page.</a>
+    <script src='./APP/jsForAll.js' ></script>
+
+    <script>
+        const urlParams = parseURLParams(window.location.href)
+        if (urlParams){
+            if (urlParams['error']){
+                document.querySelector('p').innerHTML = document.querySelector('p').innerHTML + "<br>" +  urlParams['error']
+            }
+        }
+    </script>
 </body>
 </html>

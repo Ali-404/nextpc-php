@@ -76,12 +76,16 @@ body {
 .part {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
+  flex-grow: 1;
 }
 
 .part i {
   color: rgb(230, 116, 230);
+}
+
+.part h4 {
+  width: 100%;
 }
 
 .likeBtn  {
