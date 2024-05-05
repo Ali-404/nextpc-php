@@ -1,12 +1,4 @@
-// loading bg
-window.addEventListener('DOMContentLoaded', () => {
-  const bgLoading = document.createElement("div")
-  bgLoading.className = "bgLoading hidden"
-  bgLoading.setAttribute('id', 'bgLoading') 
-  document.body.appendChild(bgLoading)
-})
 
-// alert
 function showAlert(type, text,timeout = 3000){
     var body = document.querySelector(".notifContainer")
     if (!body){
@@ -35,20 +27,38 @@ function showAlert(type, text,timeout = 3000){
 
 
 function setLoading(bool = false){
-  document.getElementById("bgLoading")?.classList.toggle("hidden",bool)
+  document.body.classList.toggle("loading", bool)
 }
 
 function UpdateNavBar(is_logged_in, username = false){
+  
   const btn = document.querySelector("#navAuthButton") 
-  const prof = document.querySelector("#navAuthProfile") 
+  const prof = document.querySelector("#navAuthProfile")
 
 
-  btn.style.display = is_logged_in  ? "none"  : "block";
-  prof.style.display = is_logged_in  ? "block"  : "none";
+  btn.style.visibility = 'hidden'
+  btn.style.position = 'absolute'
+
+  
+  prof.style.visibility = 'hidden'
+  prof.style.position = 'absolute'
+
+
+  if (is_logged_in && username){
+    
+    prof.style.visibility = 'visible'
+    prof.style.position = 'unset'
+  }else {
+    
+    btn.style.visibility = 'visible'
+    btn.style.position = 'unset'
+  }
+
 
   if (username && is_logged_in){
     btn.innerText = username[0]
   }
+
 }
 
 function requestLogout(){

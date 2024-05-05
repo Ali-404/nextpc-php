@@ -2,6 +2,7 @@
 
     include "../../Backend/Auth.php";
 
+
     if (isset($_POST["username"]) and isset($_POST["password"])){
       $logged_in =  LogIn($_POST["username"], $_POST["password"]);
         if ($logged_in){

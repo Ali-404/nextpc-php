@@ -8,7 +8,7 @@
 
 
     <!-- jquery -->
-    <script src="../../jquery-3.7.1.min.js" defer></script>
+    <script src="../../jquery-3.7.1.min.js"></script>
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -70,20 +70,20 @@
 ?>  
 
 
-    <ul class="list shadow d-flex align-items-center justify-content-md-center gap-5 text-center p-3" >
-      <li><a href="" class="bi bi-pc link link-light link-active"> Pc Gamer </a></li>
-      <li><a href="" class="bi bi-motherboard link link-light"> Mother Card</a></li>
-      <li><a href="" class="bi bi-gpu-card link link-light"> GPU</a></li>
-      <li><a href="" class="bi bi-cpu link link-light"> CPU</a></li>
-      <li><a href="" class="bi bi-memory link link-light"> RAM</a></li>
-      <li><a href="" class="bi bi-plug link link-light"> Power Supply</a></li>
-      <li><a href="" class="bi bi-display link link-light"> Monitors</a></li>
-      <li><a href="" class="bi bi-keyboard link link-light"> Accessories</a></li>
-    </ul>
+    <div id="categoriesContainer" class="list shadow d-flex align-items-center justify-content-md-center gap-5 text-center p-3 my-1" >
+      <button class="bi bi-pc link link-light link-active"> Pc Gamer </button>
+      <button class="bi bi-motherboard link link-light"> Mother Card</button>
+      <button class="bi bi-gpu-card link link-light"> GPU</button>
+      <button class="bi bi-cpu link link-light"> CPU</button>
+      <button class="bi bi-memory link link-light"> RAM</button>
+      <button class="bi bi-plug link link-light"> Power Supply</button>
+      <button class="bi bi-display link link-light"> Monitors</button>
+      <button class="bi bi-keyboard link link-light"> Accessories</button>
+    </div>
 
 
     <section class="container d-flex flex-column flex-md-row flex-wrap w-100">
-      <article class="headerInfos">
+      <article class="headerInfos" >
         <img src="../../assets/pc1.jpg" />
         <b>
           <h3>Title Of product</h3>
@@ -109,7 +109,7 @@
     </section>
 
 
-    <section class="container py-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-4">
+    <section id="productsContainer" class="container py-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-4">
 
       <div class="card ">
           <img src="https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1704927373" />

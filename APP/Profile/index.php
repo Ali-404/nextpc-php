@@ -13,52 +13,30 @@
   </head>
   <body>
 
-    <section class="min-vh-100 d-flex align-items-center justify-content-center flex-column pt-5">
-      <div class="profilePic">
+    <section class="p-5">
+      <div class="head d-flex flex- align-items-center">
+        <div class="profilePic"></div>
 
-      </div>
-
-      <div class="d-flex flex-row align-items-center justify-content-center flex-column gap-2">
-        <h1 style="font-size: 3rem;">Username</h1>
-        <p class="d-flex flex-row align-items-center justify-content-center">jamalalfa123@gmail.com</p>
-        <p class="d-flex flex-row align-items-center justify-content-center gap-1">543643<span class="bi bi-copy d-block"></span></p>
-      </div>
-
-      <div class="d-flex align-items-center p-4 ">
-        <div>
-          <h3>1045</h3><p>Followers</p>
-        </div>
-        <div>
-          <h3>106</h3><p>Following</p>
+        <div class="info">
+          <h1>Username</h1>
+          <p>username12@gmail.com</p>
+          <button class="editBtn">Edit</button>
         </div>
       </div>
 
       <div>
-        <button class="btn">Edit Profile</button>
+        <div>
+          <span></span>
+          <p>Orders</p>
+        </div>
+        <div>
+          <span></span>
+          <it>Favorites</it>
+        </div>
       </div>
+      <hr class="container-frui">
 
-      <div style="padding:6rem 4rem;">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis saepe alias officia illum, tempore enim animi voluptate nesciunt quam non aliquam, corporis itaque voluptas cumque illo esse quia molestiae eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates saepe accusantium id a architecto deserunt. Cumque repellendus fuga earum!</p>
-      </div>
 
-      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-        <div>
-          <span class="bi bi-twitter"></span>
-        </div>
-        <div>
-          <span class="bi bi-instagram"></span>
-        </div>
-        <div>
-          <span class="bi bi-facebook"></span>
-        </div>
-        <div>
-          <span class="bi bi-discord"></span>
-        </div>
-      </div>
-
-      <div>
-        <p>Joined May,2024</p>
-      </div>
 
     </section>
 

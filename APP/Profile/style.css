@@ -9,10 +9,25 @@ body {
 }
 
 .profilePic{
-  background-image: url('../../assets/bg4.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  background-color: rgb(227, 7, 146);
+}
+
+.editBtn{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(57, 24, 0);
+  border: none;
+  margin-top: 1rem;
+}
+
+.editBtn:hover{
+  border: 1px solid white;
+}
+
+.head{
+  gap: 4rem;
 }

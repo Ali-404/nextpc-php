@@ -5,6 +5,13 @@ session_start();
 include "db.php";
 
 
+function isLoggedIn(){
+    if(isset($_SESSION['account'])){
+        return true; 
+    }
+    return false;
+}
+
 function getAccountFromID($id){
     global $conn;
     $sql = "SELECT * FROM accounts WHERE id=".$id."";

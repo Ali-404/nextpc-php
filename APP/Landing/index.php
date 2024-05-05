@@ -1,4 +1,4 @@
-<html>
+<html data-bs-theme="dark">
   <head>
     <title> Landing Page </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,55 +21,54 @@
 
   </head>
   <body>
+  
+  <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
+      <div class="container-fluid">
+          <a class="navbar-brand btn2" href="#">Logo</a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon " style="color:white"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
+              <li class="nav-item">
+              <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link text-light" href="#">Contact</a>
+              </li>
+              <li class="nav-item" id="navAuthButton">
+              <a class="btn1" href="../Login/index.php">Sign In/Up</a>
+              </li>                  
+              <li class="nav-item d-flex gap-3 align-items-center" id="navAuthProfile">
+                <button class="Profile shadow">A</button>
+                <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
+              </li>    
+          </div >
+          <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
+          </div>
+    </nav>
+    
 
+    
+  <?php 
+    session_start();
+    if (isset($_SESSION["account"])){
+      $account = json_decode($_SESSION["account"], true);
+      $username = $account['username'];
+      echo "<script>UpdateNavBar(true, '".$username."')</script>";
+    }else {
+      echo "<script>UpdateNavBar(false, false)</script>";
+    }
+?>  
 
     <div class="gradientBG">
         <section class="bg">
             <div class="px-5 backBlurlOW d-flex flex-column align-items-center justify-content-center min-vh-100">
            
-                <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
-          <div class="container-fluid">
-              <a class="navbar-brand btn2" href="#">Logo</a>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon " style="color:white"></span>
-              </button>
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
-                  <li class="nav-item">
-                  <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Contact</a>
-                  </li>
-                  <li class="nav-item" id="navAuthButton">
-                  <a class="btn1" href="../Login/index.php">Sign In/Up</a>
-                  </li>                  
-                  <li class="nav-item d-flex gap-3 align-items-center" id="navAuthProfile">
-                    <button class="Profile shadow"></button>
-                    <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
-                  </li>    
-              </div >
-              <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
-              </div>
-        </nav>
-        
-
-        
-      <?php 
-          session_start();
-          if (isset($_SESSION["account"])){
-            $account = json_decode($_SESSION["account"], true);
-            $username = $account['username'];
-            echo "<script>UpdateNavBar(true, '".$username."')</script>";
-          }else {
-            echo "<script>UpdateNavBar(false)</script>";
-          }
-      ?>  
-              
               <div class="text-white  text-center d-flex flex-column  align-items-center justify-content-center" style="min-height: 100vh;">
                 <h1  class="styled shadow fw-bold">Top-quality Gaming</h1>
                 <h1  class="styled shadow fw-bold">Experience for your children</h1>
