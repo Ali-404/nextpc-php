@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 400px;
-  min-height: 760px;
+  min-height: 100vh;
 }
 
 .login {

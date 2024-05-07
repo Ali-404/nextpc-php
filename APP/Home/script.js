@@ -20,7 +20,7 @@ function LoadCategories(){
                 }
 
                 newCat.innerText = " " + categorie[1]
-                newCat.addEventListener("click", ( ) => LoadProducts(categorie[0]))
+                newCat.addEventListener("click", ( ) => LoadProducts(categorie[0],categorie))
                 categoriesContainer.appendChild(newCat)
             });
 
@@ -53,14 +53,22 @@ function LoadProducts(categorieID, categorie){
 
             // empty all 
             productsContainer.innerHTML = `<small>There is no Product in our stock.</small>`
+          
             promotionContainer.innerHTML = ``
-            adsContainer.innerHTML = ``
+            if (!promotionContainer.classList.contains("hidden")){
+                promotionContainer.classList.add("hidden")
+            }
+
+            if (!adsContainer.classList.contains("hidden")){
+                adsContainer.classList.add("hidden")
+            }
+            adsContainer.classList.add("hidden")
 
 
             // load Procuts
 
             if (products && products.length > 0 ){
-              
+                
                 if (products.length >= 12){
                     for (let i = 0; i <= 6; i++) {
                         LoadProductHTML(products[i])                        
@@ -81,17 +89,52 @@ function LoadProducts(categorieID, categorie){
     
     
                 // load Promotion
-                // adsContainer.innerHTML = `
-                // <img src="../../assets/pc1.jpg" />
-                // <b>
-                // <h3>Title Of product</h3>
-                // <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, soluta.</p>
-                // <a href="" class="btn2">Buy Now</a>
-                // </b>`
-                
+                if (categorie && categorie[3]){
+                    const targetProduct = products.filter(prd =>prd[0] ==categorie[3])[0]
+                    
+                    promotionContainer.classList.remove('hidden')
+                    if (targetProduct){
+                        promotionContainer.innerHTML = `
+                        <img src="../../UPLOAD/${targetProduct[10]}/${targetProduct[8]}" />
+                        <b>
+                        <h3>${targetProduct[1]}</h3>
+                        <p>${targetProduct[2]}</p>
+                        <a href="../Product/index.php?product=${targetProduct[0]}" class="btn2">Buy Now</a>
+                        </b>`
+                    }
+                    
+                }
     
     
                 // load Ads
+                if (categorie && categorie[4] && categorie[5] && categorie[6]){
+
+                    const ads = [categorie[4]||false,categorie[5]||false,categorie[6]||false]
+                    ads.forEach((ad,adID) => {
+                        if (!ad) return
+                        adsContainer.classList.remove('hidden')
+
+                        const _adID = adID + 1
+                        const adContainerButton = document.querySelector("#ad" + _adID.toString())
+                        
+                        const adObject = JSON.parse(ad)
+                        const title = adObject.title
+                        const disc = adObject.description
+                        const target = adObject.target
+                       
+                        if (title && disc){
+                            adContainerButton.innerHTML = `
+                            <h1>${title}</h1>
+                            <p>${disc}</p>
+                            `
+                        }
+    
+                        if (target){
+                            adContainerButton.addEventListener("click", () => window.href.location = target )
+                        }
+    
+                    })
+                }
             }
 
 

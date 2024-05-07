@@ -60,7 +60,7 @@ function UpdateNavBar(is_logged_in, username = false){
 
 
   if (username && is_logged_in){
-    btn.innerText = username[0]
+    prof.firstElementChild.innerText = username[0]
   }
 
 }

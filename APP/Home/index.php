@@ -91,16 +91,16 @@
           <a href="" class="btn2">Buy Now</a>
         </b>
       </article>
-      <div class="headersInfo2">
-        <button class="shadow">
+      <div class="headersInfo2" >
+        <button class="shadow" id="ad1">
           <h1>SALE</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, sapiente?</p>
         </button>
-        <button class="shadow">
+        <button class="shadow" id="ad2">
           <h1>SALE</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, sapiente?</p>
         </button>
-        <button class="shadow">
+        <button class="shadow" id="ad3">
           <h1>SALE</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, sapiente?</p>
         </button>
@@ -109,7 +109,7 @@
     </section>
 
 
-    <section id="productsContainer" class="container py-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-4">
+    <section id="productsContainer" class="container py-1 d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-4 min-vh-100">
 
       
     </section>

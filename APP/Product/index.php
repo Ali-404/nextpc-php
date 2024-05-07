@@ -118,7 +118,7 @@
         </spa>
       </div>
 
-      <div class="d-flex p-5 flex-wrap gap-5">
+      <div class="d-flex p-5 flex-wrap gap-5 hidden" id="infos"  >
           <div class="part">
             <i class="bi bi-cpu" style="font-size: 3em;" ></i>
             <div>
@@ -171,7 +171,11 @@
         </div> 
         <button class="btn2 bi bi-basket align-self-center w-100" style="max-width:250px"> Add to Cart <span class="text-warning">(1)</span></button>
         
-
+        <div class="description" id="discreption">
+          <h1>Description</h1>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ratione eum odit sequi veritatis minima, expedita ullam saepe nobis porro facere deserunt reiciendis corporis, mollitia iste quidem fugit labore enim.</p>
+        </div>
         </div>
       </div>
 

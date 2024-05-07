@@ -94,3 +94,17 @@ body {
   left: 5%;
   transform: translate(-5%, -95%);
 }
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
+.description {
+  margin: 3rem 0;
+  background-color: rgba(52, 4, 52, 0.589);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
