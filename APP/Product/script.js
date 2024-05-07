@@ -29,6 +29,7 @@ function changeUrl(e) {
 function LoadProduct(){
     const urlParams = parseURLParams(window.location.href)
     if (!urlParams){
+        
          console.error("No Arguments passed with the url ")
          window.location.href = `../../ERROR.php?error=${"Invalid Product !"}`
          return
@@ -70,7 +71,21 @@ function LoadProduct(){
                 
                 document.querySelector('#discreption').style.visibility = 'hidden'
             }
+            if (CountProcutsInBasket(product[0]) > 0){
 
+                document.querySelector("#productCount").innerText = "(" + CountProcutsInBasket(product[0]) + ")"
+            }else {
+                document.querySelector("#productCount").innerText = ''
+            }
+            document.querySelector("#addToBasketButton").addEventListener("click", () => {
+                AddToBasket(product[0])
+                if (CountProcutsInBasket(product[0]) > 0){
+
+                    document.querySelector("#productCount").innerText = "(" + CountProcutsInBasket(product[0]) + ")"
+                }else {
+                    document.querySelector("#productCount").innerText = ''
+                }
+            })
 
             // load pc data if pc
             if (product[6]){

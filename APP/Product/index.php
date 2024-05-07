@@ -48,7 +48,7 @@
                 <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
               </li>    
           </div >
-          <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
+          <a class="bi bi-basket fs-5 text-white floating" href="../Basket/index.php"></a>
           </div>
     </nav>
     
@@ -169,7 +169,7 @@
             </div>
           </div>
         </div> 
-        <button class="btn2 bi bi-basket align-self-center w-100" style="max-width:250px"> Add to Cart <span class="text-warning">(1)</span></button>
+        <button class="btn2 bi bi-basket align-self-center w-100" id="addToBasketButton" style="max-width:250px"> <span>Add to Basket</span> <span id="productCount" class="text-warning">(1)</span></button>
         
         <div class="description" id="discreption">
           <h1>Description</h1>
@@ -203,7 +203,7 @@
   </body>
 
   <!--  our script-->
+  <script src='../../shared/basket.js'></script>
   <script src='./script.js'></script>
-  <script src='../jsForAll.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

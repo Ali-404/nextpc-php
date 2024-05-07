@@ -8,11 +8,11 @@
 * product Page -> Ali
 * checkout page -> Ali
 * Done page -> soukaina
+* busket page -> Soukaina
 
 
 
 * Profile -> Soukaina
-* busket page -> Soukaina
 * contact page -> Ali
 
 
@@ -21,7 +21,7 @@
 
 ## ⏳ Under Dev
 * **[SOUKAINA]** Profile
-
+* **[ALI]** Soukaina
 
 ## ✅ DONES
 * Landing Page

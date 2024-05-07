@@ -36,7 +36,7 @@
               <a class="btn1" href="#">Sign In/Up</a>
               </li>                  
           </div >
-          <a class="bi bi-basket fs-5 text-white floating" href="#"></a>
+          <a class="bi bi-basket fs-5 text-white floating" href="../Basket/index.php"></a>
           </div>
     </nav>
   

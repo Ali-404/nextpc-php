@@ -130,7 +130,7 @@ function LoadProducts(categorieID, categorie){
                         }
     
                         if (target){
-                            adContainerButton.addEventListener("click", () => window.href.location = target )
+                            adContainerButton.addEventListener("click", () => window.location.href = target )
                         }
     
                     })
