@@ -27,30 +27,53 @@
 
       <div class="d-flex align-items-center">
 
-        <div id="orders" class="ordFav">
-          <span class="text-secondary bi bi-bag-fill"></span>
-          <span class="text-secondary">Orders</span>
+        <div id="orders" class="ordFav active" onclick="changePage()">
+          <span class=" bi bi-bag-fill"></span>
+          <span class="">Orders</span>
         </div>
 
-        <div id="fav" class="ordFav">
-          <span class="text-secondary bi bi-heart-fill"></span>
-          <span class="text-secondary">Favorites</span>
+        <div id="fav" class="ordFav" onclick="changePage()">
+          <span class=" bi bi-heart-fill"></span>
+          <span class="">Favorites</span>
         </div>
-
+        
+      </div>
+      <div class="pagesContainer">
+         <div id="page1" class="page">
+            
+           <div class="ordersContainer w-100 h-100">
+            <h1>Orders</h1>
+            <div class="order shadow text-bg-light p-5 rounded" >
+                <h3>BLA BLA BLA (x1)</h3>
+                <div class="w-100 d-flex align-items-center justify-content-between">
+                  <div class="info">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                  </div>
+                  <div class="info">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                  </div>
+                </div>
+                <hr class="w-100">
+                <span class="w-100 text-center">Total : 400Dhs</span>
+                <h4 class="status shadow">On Route</h4>
+              </div>
+           </div>
+ 
+         </div>
+ 
+         <div id="page2"  class="page hidden">
+            <h1>page 2</h1>
+         </div>
       </div>
 
-      <div class="border border-bottom-0 min-vh-100">
-
-        <h>
-          <span class="bi bi-border-width"></span>
-          <h3>Send </h3>
-        </h>
-
-      </div>
-
+      
     </section>
 
-    <p class="joined text-secondary">Joined May,2023</p>
+
 
   </body>
 

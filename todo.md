@@ -34,8 +34,13 @@
 
 
 
+
 ## Backend
 * Authentication System
+* E-COMERCE System
+* LIKE System
+* Busket System
+- Checkout System
 
 
 ## NOTES

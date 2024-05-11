@@ -17,6 +17,7 @@ function showAlert(type, text,timeout = 3000){
   newEl.role = 'alert'
   newEl.innerHTML = html
   body.appendChild(newEl)
+  newEl.scrollIntoView()
   if (timeout != -1){
     setTimeout(() => {
       newEl.remove()
@@ -98,3 +99,25 @@ function parseURLParams(url) {
   }
   return parms;
 }
+
+
+function CheckForMessages(){
+  const urlParams = parseURLParams(window.location.href)
+  if (urlParams){
+    if (urlParams["error"]){
+      showAlert("danger", urlParams["error"][0])
+      
+    }else if (urlParams["info"]){
+      showAlert("info", urlParams["info"][0])
+      
+    }else if (urlParams["warning"]){
+      showAlert("warning", urlParams["warning"][0])
+
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  CheckForMessages()
+})
+

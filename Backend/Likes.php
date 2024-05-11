@@ -7,7 +7,12 @@
     global $conn;
     $result;
     
-    if (isset($_GET["product"])){
+
+    if (isset($_GET["product"]) && isset($_GET["account"])){
+        $result = $conn->query("SELECT * FROM likes WHERE product='".$_GET["product"]."' AND account='".$_GET["account"]."' ");
+        
+    }
+    else if (isset($_GET["product"])){
         $result = $conn->query("SELECT * FROM likes WHERE product='".$_GET["product"]."' ");
     }else if (isset($_GET['account'])){
         $result = $conn->query("SELECT * FROM likes WHERE account='".$_GET["account"]."' ");

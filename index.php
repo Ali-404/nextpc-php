@@ -16,8 +16,7 @@
   </style>
   <body class="loading">
 
-
-   
+  <!-- loading page -->
 
   <script>
     window.location.href = "./APP/Landing/index.php";

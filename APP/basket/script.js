@@ -38,11 +38,12 @@ function loadBasketData(){
                                 </div>
                                 <div class="d-flex flex-column align-items-center gap-1">
                                 <h3 id="price-${product[0]}">${product[3] * count} Dhs</h3>
-                                <button class="btn btn-outline-danger" onclick="RemoveProd(${product[0]})">Remove</button>
+                                <button class="btn btn-outline-danger" onclick="RemoveOne(${product[0]})">Remove</button>
                                 </div>
                             `
                             
                             const hr = document.createElement("hr")
+                            hr.id = "hr-" + product[0]
                             hr.className = "w-100"
                             container.appendChild(hr)
                             container.appendChild(newEl)
@@ -88,6 +89,11 @@ function AddProd(id,price){
     AddToBasket(id,1)
     updateEl(id, price)
 }
+
+function RemoveOne(id){
+    RemoveFromBasket(id)
+    updateEl(id, 0)
+}
 function RemoveProd(id ,price){
     RemoveFromBasket(id,1)
     updateEl(id, price)
@@ -104,6 +110,7 @@ function updateEl(id, price){
 
         }else {
             document.querySelector("#productContainer-" + id).remove()
+            document.querySelector("#hr-" + id).remove()
             if (!GetProductsInBasket()){
                 document.querySelector("#noProcuctsText").classList.remove("hidden")
                 document.querySelector("#checkout").classList.add("disabled")

@@ -1,5 +1,5 @@
 // load images in pictures
-
+var isFirstTime = true
 
 function loadImages(images){
     const btnsContainer = document.querySelector(".picturesSec .btns")
@@ -51,6 +51,9 @@ function LoadProduct(){
                 return
             }
             const product = res[0]
+
+            updateLikes(-1,product[0])
+
 
             document.querySelector("#titleH1").innerText = product[1]
 
@@ -111,27 +114,29 @@ function LoadProduct(){
             }
             // images
 
+
             $.ajax({
                 type: "GET",
-                url: "../../Backend/Likes.php",
-                data: {
-                    product:product[0]
-                },
+                url: "../../Backend/CurrentAccount.php",
                 dataType: "json",
-                success: function (likesTable) {
-                    document.querySelector("#likes").innerText = " " + (likesTable.length || 0).toString() + " Likes"
-                    
+                success: function (accountData) {
+                    const correntAccountData = JSON.parse(accountData["account"])
+                    if (correntAccountData && !correntAccountData.error){
+                        // likes
+                       updateLikes(correntAccountData.id, product[0])
+                    }else {
+                        console.warn("No Account to get likes !")
+                    }
                 }
             });
 
-            // likes
 
-            // user Like
+            
 
 
 
             // remove loading
-            setTimeout(() => setLoading(false),400)
+            setTimeout(() => setLoading(false),1000)
             
         },
         error:function(xhr, ajaxOptions, thrownError){
@@ -141,5 +146,58 @@ function LoadProduct(){
     });
 }
 
+
+
+function Like(account, product){
+    $.ajax({
+        type: "post",
+        url: "../../Backend/AddLikes.php",
+        data: {
+            "account":account,
+            "product":product
+        },
+        dataType: "json",
+        success: function (response) {
+            updateLikes(account, product);
+        },
+        error: function(a,b,err){
+            console.error(err);
+        }
+    });
+}
+
+function updateLikes(account,product){
+    $.ajax({
+        type: "GET",
+        url: "../../Backend/Likes.php",
+        data: {
+            product:product,
+            // account:account
+        },
+        dataType: "json",
+        success: function (likesTable) {
+            if (account && account != -1){
+                const MyLikesCount = likesTable.filter(like => like[1] == account).length || 0
+                if (MyLikesCount > 0 && isFirstTime){
+                    document.getElementById("heart").checked = true;
+                    isFirstTime = false;  
+                }
+
+                    // user on Like
+
+                document.getElementById("heart").onclick = () => Like(account, product)
+            
+
+            }else {
+
+                document.getElementById("heart").onclick = (e) => {e.preventDefault();showAlert("danger", "Please LogIn to like .")}
+            }
+            const allLikes = likesTable.length || 0
+            
+            document.querySelector("#likes").innerText = " " + allLikes.toString() + " Likes"
+            
+        }
+    });
+}
 setLoading(true)
 LoadProduct()
