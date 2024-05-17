@@ -59,6 +59,9 @@
           <a class="btn1" href="../Signup/index.php">Sign up now</a>
           </div>
         </div>
+        <div class="align-self-center">
+          <a class="btn1" href="../Home/index.php">Home Page</a>
+          </div>
 
       </form>
 

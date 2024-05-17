@@ -6,13 +6,19 @@
 
 body {
   background-color: var(--bg);
+  background-image: url(../../assets/pattern.png);
+  background-size: 15%;
 }
+
 
 .profilePic{
   width: 200px;
   height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+  
   border-radius: 50%;
-  background-color: rgb(227, 7, 146);
+  background-color: rgb(195, 42, 185);
   text-align: center;
   font-size: 7rem;
   display: flex;
@@ -34,6 +40,10 @@ body {
 }
 
 .head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 4rem;
   margin-bottom: 4rem;
 }
@@ -55,30 +65,31 @@ body {
 
 .pagesContainer {
   width: 100%;
-  position: relative;
+  min-height: 100vh;
 
 }
 .page {
   width: 100%;
   padding: 15px;
-  transform: translateX(0);
   border: 1px solid gray;
   transition: all 0.3s ease-in-out;
 }
 
-.page.hidden {
+.hidden {
   position: absolute;
-  left: -100%;
+  left: -200%;
   pointer-events: none;
-  transform: translateX(100%);
 }
 
 .ordersContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 4;
+  justify-content: flex-start;
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .order {
@@ -104,4 +115,11 @@ body {
   border-radius: 25px;
   margin: 10px 0;
   cursor: default;
+}
+
+.favorite img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
 }

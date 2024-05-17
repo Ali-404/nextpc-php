@@ -21,8 +21,8 @@
         <i class="bi bi-check" style="font-size: 18em;" ></i>
       </div>
       <h4>Order Complete</h4>
-      <p class="text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, maiores?</p>
-      <a href="" class="text-center btn2" >Continue</a>
+      <a href="../Profile/index.php#orders" class="text-center btn2" >See Orders</a>
+      <a href="../Home/index.php" class="text-center btn2" >Continue Shopping</a>
     </div>
     
   

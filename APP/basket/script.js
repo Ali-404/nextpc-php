@@ -138,3 +138,23 @@ function removeAll(){
     document.querySelector("#checkout").classList.add("disabled")
 }
 updateDisible()
+
+
+function toCheckout(e){
+    e.preventDefault()
+    $.ajax({
+        type: "GET",
+        url: "../../Backend/CurrentAccount.php",
+        dataType: "json",
+        success: function (response) {
+            if (response && response?.account){
+                
+                window.location.href = "../Checkout/index.php?account="+JSON.parse(response.account)["id"]
+
+                
+            }else {
+                showAlert("warning", "You must be logged in to complete ! Please Login or Sign Up.")
+            }
+        }
+    });
+}

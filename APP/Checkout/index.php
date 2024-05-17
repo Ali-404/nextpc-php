@@ -4,6 +4,9 @@
     <title> Checkout </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset=UTF-8">
+    
+    <!-- jquery -->
+    <script src="../../jquery-3.7.1.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--  icons -->
@@ -11,12 +14,15 @@
     <!-- style -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../cssForAll.css">
+    
+    <script src='../jsForAll.js'></script>
+
   </head>
   <body>
-
+  
   <nav class="navbar navbar-dark px-5 py-3 navbar-expand-md w-100  shadow">
       <div class="container-fluid">
-          <a class="navbar-brand btn2" href="#">Logo</a>
+          <a class="navbar-brand btn2 bi bi-pc-display" href="../Landing/index.php"> Next PC</a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon " style="color:white"></span>
@@ -24,7 +30,7 @@
           <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Pc Gamer</a>
+              <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
               </li>
               <li class="nav-item">
               <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
@@ -32,77 +38,81 @@
               <li class="nav-item">
               <a class="nav-link text-light" href="#">Contact</a>
               </li>
-              <li class="nav-item">
-              <a class="btn1" href="#">Sign In/Up</a>
+              <li class="nav-item" id="navAuthButton">
+              <a class="btn1" href="../Login/index.php">Sign In/Up</a>
               </li>                  
+              <li class="nav-item d-flex gap-3 align-items-center" id="navAuthProfile">
+                <button class="Profile shadow">A</button>
+                <button onclick="requestLogout()" class="btn btn-outline-danger ">Logout</button>
+              </li>    
           </div >
-          <a class="bi bi-basket fs-5 text-white floating" href="../Basket/index.php"></a>
           </div>
     </nav>
-  
+
+    <?php 
+    session_start();
+    if (isset($_SESSION["account"])){
+      $account = json_decode($_SESSION["account"], true);
+      $username = $account['username'];
+      echo "<script>UpdateNavBar(true, '".$username."')</script>";
+    }else {
+      echo "<script>UpdateNavBar(false)</script>";
+    }
+?>  
+
     <div class="d-flex flex-column flex-md-row" style="min-height: 100vh;">
 
     <section class=" p-5" style="flex:1">
-      <form action="" class="d-flex  gap-3 justify-content-center flex-column flex-md-row flex-wrap">
+      <form  method="post" onsubmit="submitPayment(event)" class="d-flex  gap-3 justify-content-center flex-column flex-md-row flex-wrap">
         <div class="" style="flex:1;">
           <h4>Contact Information</h4>
           <hr class="w-100">
           <label class="form-label" for="">Full Name</label>
-          <input class="form-control" type="text" name="" id="">
+          <input class="form-control" type="text" required name="fullName" id="fullName">
           <label class="form-label" for="">Email Adresse</label>
-          <input class="form-control" type="email" name="" id="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis cupiditate molestiae accusamus, fuga consequatur!</p>
+          <input class="form-control" type="email" required name="emailAdress" id="emailAdress">
       </div>
       <div class="" style="flex:1;">
-          <h4>Contact Information</h4>
-          <hr class="w-100">
-          <label class="form-label" for="">Full Name</label>
-          <input class="form-control" type="text" name="" id="">
-          <label class="form-label" for="">Email Adresse</label>
-          <input class="form-control" type="email" name="" id="">
-          <label class="form-label" for="">Email Adresse</label>
-          <input class="form-control" type="email" name="" id="">
-          <label class="form-label" for="">Email Adresse</label>
-          <input class="form-control" type="email" name="" id="">
+         
       </div>
       <hr class="w-100">
       <div class="" style="flex:1;">
           <h4>Credit Card Details</h4>
           <hr class="w-100">
           <label class="form-label" for="">Card Name</label>
-          <input class="form-control" type="text" name="" id="">
+          <input class="form-control" type="text" required name="cardName" id="">
           <label class="form-label" for="">Card Number</label>
-          <input class="form-control" type="email" name="" id="">
+          <input class="form-control" type="number" required name="cardNumber" id="">
 
           <img src="../../assets/payment.png" class="my-2" style="max-width:200px;" /><br>
 
           <label class="form-label" for="">Expiration date</label>
           <div class="d-flex gap-2">
-            <select class="form-select" name='expireMM' id='expireMM'>
+            <select class="form-select" required name='m' id='expireMM'>
                 <option value=''>Month</option>
-                <option value='01'>January</option>
-                <option value='02'>February</option>
-                <option value='03'>March</option>
-                <option value='04'>April</option>
-                <option value='05'>May</option>
-                <option value='06'>June</option>
-                <option value='07'>July</option>
-                <option value='08'>August</option>
-                <option value='09'>September</option>
+                <option value='1'>January</option>
+                <option value='2'>February</option>
+                <option value='3'>March</option>
+                <option value='4'>April</option>
+                <option value='5'>May</option>
+                <option value='6'>June</option>
+                <option value='7'>July</option>
+                <option value='8'>August</option>
+                <option value='9'>September</option>
                 <option value='10'>October</option>
                 <option value='11'>November</option>
                 <option value='12'>December</option>
             </select> 
-            <select class="form-select"  name='expireYY' id='expireYY'>
+            <select class="form-select"  name='y' id='expireYY'>
                 <option value=''>Year</option>
                 
             </select> 
           </div>
           <label class="form-label" for="">Securite Code</label>
-          <input class="form-control w-50"  type="number" name="" id="">
-          <div class="my-5 btn2 text-center " style="cursor: pointer;">
-            <a class="link link-light " href="">Conferm Payment</a>
-          </div>
+          <input class="form-control w-50" required type="number" name="code" id="">
+          <button type="submit"  class="my-5 btn2 text-center w-100" style="cursor: pointer;">
+            <a class="link link-light" href="#">Conferm Payment</a>
+          </button>
         </div>
       <div style="flex:1;"></div>
     </form>
@@ -152,12 +162,12 @@
           <p class="text-center text-body-white">© 2024 Company, Inc</p>
       </footer>
 
+   
   
 
 </body>
 
   <!--  our script-->
   <script src='./script.js'></script>
-  <script src='../jsForAll.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

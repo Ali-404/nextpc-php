@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../cssForAll.css">
 
+  <script src='../../shared/basket.js'></script>
   <script src='../jsForAll.js'></script>
 
   </head>

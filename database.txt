@@ -4,5 +4,3 @@ Orders -> id,account_id(F),products, state, Tax,delevery
 
 
 Products -> id, name, discr, price, oldPrice, stock,is_pc, PC_data, cover, images, likes
-
-cards -> id, card_name,card_number, m,y,security_code,blocked, sold

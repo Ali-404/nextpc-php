@@ -1,5 +1,5 @@
 
-function showAlert(type, text,timeout = 3000){
+function showAlert(type, text,timeout = 5000){
     var body = document.querySelector(".notifContainer")
     if (!body){
       body = document.createElement('div')
@@ -121,3 +121,29 @@ document.addEventListener("DOMContentLoaded", () => {
   CheckForMessages()
 })
 
+function basketNotif(){
+  const basket = document.querySelector(".floating")
+  if (basket){
+      let items = 0
+      const itemsInBasket = localStorage.getItem("basket")
+      const itemsInBasketArray = JSON.parse(itemsInBasket) || []
+      const keys = Object.keys(itemsInBasketArray)
+      keys.forEach(k => {
+        const v = itemsInBasketArray[k]
+        if (v){
+          items += v
+        }
+      }) 
+      if (items && items > 0){
+        basket.innerHTML = `
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill " style="background:rgb(255, 0, 102)">
+        ${items}
+        <span class="visually-hidden">unread messages</span>`
+      }else {
+        basket.innerHTML = ``
+      }
+   
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => basketNotif())

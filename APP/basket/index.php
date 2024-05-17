@@ -94,7 +94,7 @@
          </div>
           
           
-          <a href="../Checkout/index.php" id="checkout" class="btn btn2  bi bi-bag-check" > Checkout</a>
+          <a href="" onclick="toCheckout(event)" id="checkout" class="btn btn2  bi bi-bag-check" > Checkout</a>
       
         </section>
       </div>

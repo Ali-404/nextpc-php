@@ -79,7 +79,11 @@
           <div>
           <a class="btn1" href="../Login/index.php">Log In</a>
           </div>
+          
         </div>
+        <div class="align-self-center">
+          <a class="btn1" href="../Home/index.php">Home Page</a>
+          </div>
 
       </form>
     </div>
