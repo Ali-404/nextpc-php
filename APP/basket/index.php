@@ -28,14 +28,14 @@
           <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
+              <a class="nav-link text-light active" aria-current="page" href="../Landing/index.php">Landing</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
+              <a class="nav-link text-light active" aria-current="page" 
+target="_blank"
+href="../Admin/index.php">Admin</a>
               </li>
-              <li class="nav-item">
-              <a class="nav-link text-light" href="#">Contact</a>
-              </li>
+             
               <li class="nav-item" id="navAuthButton">
               <a class="btn1" href="../Login/index.php">Sign In/Up</a>
               </li>                  
@@ -94,7 +94,7 @@
          </div>
           
           
-          <a href="" onclick="toCheckout(event)" id="checkout" class="btn btn2  bi bi-bag-check" > Checkout</a>
+          <a href="" id="checkout" class="btn btn2  bi bi-bag-check" > Checkout</a>
       
         </section>
       </div>

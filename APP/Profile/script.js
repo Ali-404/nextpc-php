@@ -27,7 +27,6 @@ function loadInfos(){
           `
 
           loadFavorites(userData.id)
-          loadOrders(userData.id)
         },
         "json"
     );

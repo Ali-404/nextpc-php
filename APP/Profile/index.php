@@ -29,49 +29,18 @@
 
       <div class="d-flex align-items-center">
 
-        <div id="orders" class="ordFav active" onclick="changePage()">
-          <span class=" bi bi-bag-fill"></span>
-          <span class="">Orders</span>
-        </div>
+        
 
-        <div id="fav" class="ordFav" onclick="changePage()">
+        <div id="fav" class="ordFav" >
           <span class=" bi bi-heart-fill"></span>
           <span class="">Favorites</span>
         </div>
         
       </div>
       <div class="pagesContainer">
-         <div id="page1" class="page ">
-           <div class="ordersContainer gap-3">
-            <h1>Orders</h1>
-              <div class="order shadow text-bg-light p-5 rounded" >
-                <h3>BLA BLA BLA (x1)</h3>
-                <div class="w-100 d-flex align-items-center justify-content-between">
-                  <div class="info">
-                    <span>1</span>
-                    <span>2</span> 
-                    <span>3</span>
-                  </div>
-                  <div class="info">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                  </div>
-                </div>
-                <hr class="w-100">
-                <span class="w-100 text-center">Total : 400Dhs</span>
-                <h4 class="status shadow">On Route</h4>
-              </div>
-              
-              
-              
-              
-           </div>
-           
+         
  
-         </div>
- 
-         <div id="page2"  class="page hidden d-flex flex-column align-items-center gap-3">
+         <div id="page2"  class="page  d-flex flex-column align-items-center gap-3">
             <h1>Favorites</h1>
             <div class="w-100 d-flex align-items-center flex-wrap gap-3 justify-content-start favContainer" style="max-height: 100vh;">
             

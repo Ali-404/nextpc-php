@@ -20,9 +20,7 @@
       <div  class=" rounded-circle shadow d-flex flex-column align-items-center  text-center justify-content-center" style="width: 350px;height: 350px; background:rgb(213, 118, 221);color: purple;">
         <i class="bi bi-check" style="font-size: 18em;" ></i>
       </div>
-      <h4>Order Complete</h4>
-      <a href="../Profile/index.php#orders" class="text-center btn2" >See Orders</a>
-      <a href="../Home/index.php" class="text-center btn2" >Continue Shopping</a>
+      <a href="../Home/index.php" class="text-center btn2" >Continue</a>
     </div>
     
   

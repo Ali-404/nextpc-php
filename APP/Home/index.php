@@ -36,14 +36,14 @@
           <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navmiddle  navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-5 ">
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Store</a>
+              <a class="nav-link text-light active" aria-current="page" href="../Landing/index.php">Landing</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#">Pieces</a>
+              <a class="nav-link text-light active" aria-current="page" 
+target="_blank"
+href="../Admin/index.php">Admin</a>
               </li>
-              <li class="nav-item">
-              <a class="nav-link text-light" href="#">Contact</a>
-              </li>
+             
               <li class="nav-item" id="navAuthButton">
               <a class="btn1" href="../Login/index.php">Sign In/Up</a>
               </li>                  
@@ -119,13 +119,10 @@
     </div>
     <footer class="py-3 ">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+        
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">OFPPT | Mme. Toufla Project </a></li>
         </ul>
-        <p class="text-center text-body-white">© 2024 Company, Inc</p>
+        <p class="text-center text-body-white">© Abdelali AitAddi & Soukaina Akaroum</p>
     </footer>
 
     

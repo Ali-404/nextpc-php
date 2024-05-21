@@ -91,7 +91,7 @@ function LoadProduct(){
             })
 
             // load pc data if pc
-            if (product[6]){
+            if (product[6] && product[6] == 1){
                 if (product[7] && product[7] != null){
 
                     document.querySelector("#infos").classList.remove("hidden")
@@ -99,7 +99,10 @@ function LoadProduct(){
                     const keys = Object.keys(pcData)
 
                     keys.forEach(pcInfoTitle => {
-                        document.querySelector("#" + pcInfoTitle).innerText = pcData[pcInfoTitle]
+                        const el = document.querySelector("#" + pcInfoTitle)
+                        if (el){
+                            el.innerText = pcData[pcInfoTitle]
+                        }
                     })
                 }
 
@@ -200,4 +203,4 @@ function updateLikes(account,product){
     });
 }
 setLoading(true)
-LoadProduct()
+document.addEventListener("DOMContentLoaded", () => LoadProduct())

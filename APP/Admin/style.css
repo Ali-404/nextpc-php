@@ -9,3 +9,55 @@ body {
   background: url(../../assets/pattern.png);
   background-size: 15%;
 }
+
+
+.bigButton {
+  min-height: 400px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  position: relative;
+
+
+}
+
+.bigButton:hover {
+
+  transform:  scale(1.1);
+}
+
+
+.bigButton::after {
+
+  font-size: 1.2em;
+
+
+}
+
+.bigButton:hover::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-image: url(../../assets/pattern.png);
+  background-size: 25%;
+} 
+
+.bigButton#add:hover::after{
+  content: "Add Product";
+  
+}
+.bigButton#update:hover::after{
+  content: "Update/Delete Product";
+  
+}
