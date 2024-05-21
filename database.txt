@@ -1,6 +1,4 @@
 Accounts -> id, username, email,phone, password, favs[product_id]
 
-Orders -> id,account_id(F),products, state, Tax,delevery 
-
 
 Products -> id, name, discr, price, oldPrice, stock,is_pc, PC_data, cover, images, likes

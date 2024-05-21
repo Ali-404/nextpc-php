@@ -6,22 +6,14 @@
 * Landing Page -> Ali
 * Home Page -> Ali
 * product Page -> Ali
-* checkout page -> Ali
 * Done page -> soukaina
 * busket page -> Soukaina
 
-
-
 * Profile -> Soukaina
-* contact page -> Ali
 
 
 
 
-
-## ⏳ Under Dev
-* **[SOUKAINA]** Profile
-* **[ALI]** Soukaina
 
 ## ✅ DONES
 * Landing Page
@@ -35,13 +27,9 @@
 
 
 
-## Backend
+## 
 * Authentication System
-* E-COMERCE System
-* LIKE System
-* Busket System
-- Checkout System
+* produit mn database 
+* like o dislike
+* basket 
 
-
-## NOTES
-*

@@ -59,7 +59,6 @@
     <div class="w-100 d-flex align-items-center justify-content-center gap-3 py-3">
       <a href="../home/" class="btn btn-primary bi bi-arrow-left "> BACK</a>
       <a href="" onclick="requestLogout()" class="btn btn-danger bi bi-door-closed "> Logout</a>
-      <a href="../home/" class="btn btn-outline-danger bi bi-trash "> Delete Account</a>
     </div>
   </body>
 

@@ -1,7 +1,7 @@
 
 <html data-bs-theme="dark">
   <head>
-    <title> NAME OF PAGE </title>
+    <title> Basket </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset=UTF-8">
     <!-- bootstrap -->

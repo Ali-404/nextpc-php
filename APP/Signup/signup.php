@@ -49,7 +49,8 @@
         if (CreateAccount($_POST['username'], $_POST['password'], $_POST['gmail'],$_POST["phone"] )){
             echo "<script>showAlert('success','Account Created Successfully')</script>";
             echo "<script>setLoading(false)</script>";
-            header('location:../Login/index.php');
+            echo "<script>window.location.href = '../Login/index.php'</script>";
+            
             return false;
             
         }

@@ -65,7 +65,6 @@ function LogIn($username, $password){
     // match password
     $hashed_password = $account["password"];
     if (!password_verify($password, $hashed_password)){
-        echo "<script>showAlert('danger', '".$password." ".$hashed_password."  ' )</script>";
         echo "<script>showAlert('danger', 'Wrong Password !')</script>";
         return false;
     }
