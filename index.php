@@ -1,4 +1,3 @@
-<!-- had page mafiha walo ghir l redirect o sf  -->
 
 <html >
   <head>
