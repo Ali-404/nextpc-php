@@ -1,0 +1,125 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url(../../assets/pattern.png);
+  background-size: 15%;
+}
+
+
+.profilePic{
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+  
+  border-radius: 50%;
+  background-color: rgb(195, 42, 185);
+  text-align: center;
+  font-size: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editBtn{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(57, 24, 0);
+  border: none;
+  margin-top: 1rem;
+}
+
+.editBtn:hover{
+  border: 1px solid white;
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.ordFav{
+  padding: 1rem 2rem;
+}
+
+.ordFav:hover{
+  cursor: pointer;
+}
+
+
+.active * {
+  font-weight: bold;
+  color: whtie;
+  text-decoration: overline;
+}
+
+.pagesContainer {
+  width: 100%;
+  min-height: 100vh;
+
+}
+.page {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid gray;
+  transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+  position: absolute;
+  left: -200%;
+  pointer-events: none;
+}
+
+.ordersContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4;
+  justify-content: flex-start;
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.order {
+  min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.info {
+  padding: 0 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  padding: 10px 15px;
+  background-color: #e5e5e5;
+  border-radius: 25px;
+  margin: 10px 0;
+  cursor: default;
+}
+
+.favorite img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+}

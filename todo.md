@@ -2,34 +2,34 @@
 
 ### Pages
 * Login -> soukaina
-* Register -> soukaina
+* Signup -> soukaina
 * Landing Page -> Ali
 * Home Page -> Ali
-
-
+* product Page -> Ali
+* Done page -> soukaina
+* busket page -> Soukaina
 
 * Profile -> Soukaina
-* product Page -> Ali
-* busket page -> Soukaina
-* checkout page -> Ali
-* Done Page -> Soukaina
-* contact page -> Ali
 
 
 
-
-## ⏳ Under Dev
-* **[SOUKAINA]** Register
 
 
 ## ✅ DONES
 * Landing Page
 * Login
 * Home
+* Signup
+* Product Page
+* Checkout Page
+* Done Page
 
 
 
 
+## 
+* Authentication System
+* produit mn database 
+* like o dislike
+* basket 
 
-## NOTES
-* ila bghiti tcopy folder TEMPLATE l APP diri click limn open shell here and had command tmak : cp -r TEMPLATE APP/

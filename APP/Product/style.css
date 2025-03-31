@@ -1,0 +1,110 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.picturesSec .thePic{
+  width: 500px;
+  height: 500px;
+  max-width: 70vw;
+  position: relative;
+}
+
+.picturesSec .thePic > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: rgb(46, 18, 72);
+  background-image: url("../../assets/pattern.png");
+  background-size: 25%;
+  border-radius: 25px;
+  cursor: grab;
+}
+
+.picturesSec .btns {
+  max-width: 30vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width:800px) {
+  .picturesSec .btns {
+    max-width: 70vw;
+  }
+}
+
+.picturesSec .btns button {
+  flex:1;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(46, 18, 72);
+  background-image: url("../../assets/pattern.png");
+  background-size: 25%;
+  border: none;
+  outline: none;
+  max-width: 250px;
+  max-height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  width: 250px;
+  height: 250px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.picturesSec .btns button:hover {
+  transform: scale(1.05);
+  background-color: rgb(69, 28, 107);
+}
+
+.picturesSec .btns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.part i {
+  color: rgb(230, 116, 230);
+}
+
+.part h4 {
+  width: 100%;
+}
+
+.likeBtn  {
+  position: absolute;
+  top: 95%;
+  left: 5%;
+  transform: translate(-5%, -95%);
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
+.description {
+  margin: 3rem 0;
+  background-color: rgba(52, 4, 52, 0.589);
+  padding: 2rem;
+  border-radius: 15px;
+}
+

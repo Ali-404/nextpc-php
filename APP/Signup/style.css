@@ -6,17 +6,17 @@
 
 body {
   height: 100vh;
-  background-color: rgb(28, 3, 40);
-  padding: 3rem 0;
+  background-color: rgb(4, 41, 53);;
+  
  
 }
 
 .divCenter{
   /* min-width: 800px; */
   /* min-height: 480px; */
-  background-color: rgb(67, 7, 97);
-  overflow: hidden;
-  
+  min-height: 100vh;
+  background-color: rgb(7, 74, 97);
+  /* overflow: hidden; */
   background-image: url("../../assets/pattern.png");
   background-size: 25%;
 }
@@ -24,11 +24,11 @@ body {
 
 
 .picture{
-  background-image: url('../../assets/pc1.jpg');
+  background-image: url('../../assets/pc2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 400px;
-  min-height: 690px;
+  min-height: 100vh;
 }
 
 .login {
@@ -78,3 +78,4 @@ body {
   border-radius: 50%;
   font-size: 2rem;
 }
+

@@ -1,8 +1,9 @@
-TEMPLATE:
 
-<html>
+<html data-bs-theme="dark">
   <head>
-    <title> NAME OF PAGE </title>
+    <title> Done </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-  QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,6 +16,12 @@ TEMPLATE:
   <body>
 
 
+    <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center gap-3 ">
+      <div  class=" rounded-circle shadow d-flex flex-column align-items-center  text-center justify-content-center" style="width: 350px;height: 350px; background:rgb(213, 118, 221);color: purple;">
+        <i class="bi bi-check" style="font-size: 18em;" ></i>
+      </div>
+      <a href="../Home/index.php" class="text-center btn2" >Continue</a>
+    </div>
     
   
 

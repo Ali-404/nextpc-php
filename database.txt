@@ -1,0 +1,4 @@
+Accounts -> id, username, email,phone, password, favs[product_id]
+
+
+Products -> id, name, discr, price, oldPrice, stock,is_pc, PC_data, cover, images, likes

@@ -10,20 +10,23 @@
 
 body {
   background-color: var(--bg);
+ 
 }
-
-
-
-
   .sonImage {
     max-width: 600px;
     border-radius: 25px;
   }
 
-  
+  h1.title {
+    font-size:10rem;
+  }
   @media screen and (max-width: 700px) {
     h1.styled {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    h1.title {
+      font-size: 5rem;
     }
 
     nav {
@@ -35,4 +38,10 @@ body {
     .sonImage {
       max-width: 350px;
     }
+  }
+
+  .imagePattern {
+    background-image: url('../../assets/pattern.png');
+    background-size: 15%;
+    background-color: rgb(14, 1, 14);
   }

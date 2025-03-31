@@ -1,0 +1,83 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url('../../assets/pattern.png');
+  background-size: 12%;
+}
+
+.controlBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  border-radius: 50%;
+  background-color: rgb(224, 140, 243);
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.controlBtn:hover {
+  transform: scale(1.1);
+  background-color: rgb(243, 140, 181);
+
+}
+
+.productImage {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+}
+
+#checkout{
+  min-width: 50%;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+small.hidden {
+  visibility: none;
+  pointer-events: none;
+}
+
+
+
+.infos {
+  flex:1;
+  width: 100%;
+
+  /* max-width: 100%; */
+}
+
+.infos p{
+  max-width: 100%;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:700px) {
+  .infos p {
+    max-width: 70%;
+  }
+}
